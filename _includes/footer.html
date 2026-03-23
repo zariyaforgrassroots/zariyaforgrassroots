@@ -1,0 +1,24 @@
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <span class="logo-text">Zariya</span>
+      <p>Building Institutional Readiness of<br>Community Based Organizations</p>
+    </div>
+    <div class="footer-links">
+      <nav>
+        {% for item in site.navigation %}
+        <a href="{{ item.url | relative_url }}">{{ item.title }}</a>
+        {% endfor %}
+      </nav>
+    </div>
+    <div class="footer-contact">
+      <p><a href="mailto:buildwithzariya@gmail.com">buildwithzariya@gmail.com</a></p>
+      <p><a href="tel:+918219599236">82195 99236</a></p>
+      <p><a href="https://linkedin.com/company/zariya" target="_blank" rel="noopener">LinkedIn ↗</a></p>
+      <p class="hashtag">#resilientTogether</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© {{ 'now' | date: "%Y" }} Zariya. All rights reserved.</p>
+  </div>
+</footer>

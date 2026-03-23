@@ -1,0 +1,24 @@
+title: Zariya
+description: Building Institutional Readiness of Community Based Organizations
+baseurl: ""
+url: ""
+
+author: Zariya
+email: buildwithzariya@gmail.com
+phone: "82195 99236"
+linkedin: "https://www.linkedin.com/company/zariyainitiative"
+
+nav_links:
+  - title: Home
+    url: /
+  - title: About
+    url: /about/
+  - title: Program
+    url: /program/
+  - title: Team
+    url: /team/
+  - title: Contact
+    url: /contact/
+
+plugins:
+  - jekyll-seo-tag

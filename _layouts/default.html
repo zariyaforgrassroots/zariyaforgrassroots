@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% if page.title %}{{ page.title }} — {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
+  <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+  <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav__inner">
+    <a href="{{ '/' | relative_url }}" class="nav__logo">Zariya</a>
+    <ul class="nav__links">
+      {% for link in site.nav_links %}
+      <li>
+        <a href="{{ link.url | relative_url }}"{% if link.title == "Contact" %} class="nav__cta"{% endif %}>{{ link.title }}</a>
+      </li>
+      {% endfor %}
+    </ul>
+    <button class="nav__toggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<div class="support-strip">
+  Support community-led institutions — <a href="{{ '/contact/' | relative_url }}">Partner with Zariya →</a>
+</div>
+
+{{ content }}
+
+<footer class="footer">
+  <div class="footer__inner">
+    <a href="{{ '/' | relative_url }}" class="footer__logo">Zariya</a>
+    <ul class="footer__links">
+      {% for link in site.nav_links %}
+      <li><a href="{{ link.url | relative_url }}">{{ link.title }}</a></li>
+      {% endfor %}
+    </ul>
+    <div>
+      <a href="mailto:{{ site.email }}" style="color: rgba(255,255,255,0.45); font-size:0.8rem;">{{ site.email }}</a>
+    </div>
+  </div>
+</footer>
+
+<script src="{{ '/assets/js/main.js' | relative_url }}"></script>
+</body>
+</html>
